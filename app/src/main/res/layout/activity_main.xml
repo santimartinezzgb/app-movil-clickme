@@ -6,17 +6,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFFFFF">
 
+    <LinearLayout
+        android:background="@drawable/movil"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </LinearLayout>
+
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="top|center"
-        android:textSize="24sp"
-        android:textColor="#FFFFFF"
+        android:layout_marginTop="100dp"
+        android:textSize="50dp"
         tools:ignore="MissingConstraints"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/button" />
-
 
     <EditText
         android:id="@+id/input"
@@ -31,13 +37,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20dp"
         android:layout_width="180dp"
         android:layout_height="80dp"
         android:text="Click me"
         android:textColor="#FFFFFF"
         android:backgroundTint="@color/purple_500"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="353dp"
         />
 
     <Button
@@ -49,7 +54,8 @@
         android:visibility="gone"
         android:layout_width="180dp"
         android:layout_height="80dp"
-        android:text="Back"
+        android:textSize="20dp"
+        android:text="BACK"
         android:textColor="#FFFFFF"
         android:backgroundTint="#2BE02B"
         tools:layout_editor_absoluteX="145dp"

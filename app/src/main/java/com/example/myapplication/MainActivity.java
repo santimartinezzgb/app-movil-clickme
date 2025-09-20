@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,22 +23,27 @@ public class MainActivity extends AppCompatActivity {
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button button_back = findViewById(R.id.button_back);
         TextView textView = findViewById(R.id.textView);
         EditText input = findViewById(R.id.input);
-        String texto = input.getText().toString();
 
         button.setOnClickListener(new View.OnClickListener() {
+
 
             @Override
             public void onClick(View v) {
 
-                if(texto.isEmpty()){
+                String texto = input.getText().toString().trim();
+
+                if(texto.trim().equals("cabron")){
+                    Toast.makeText(MainActivity.this, "Palabra prohibida detectada" , Toast.LENGTH_SHORT).show();
+
+                }else if(texto.isEmpty()){
                     Toast.makeText(MainActivity.this, "Por favor ingresa tu nombre", Toast.LENGTH_SHORT).show();
-                    return;
+
                 } else{
                     button_back.setVisibility(View.VISIBLE);
                     input.setVisibility(View.GONE);
                     button.setVisibility(View.GONE);
                     textView.setVisibility(View.VISIBLE);
-                    textView.setText("Hola"+ texto);
+                    textView.setText("Hola" + " " + texto);
                 }
 
             }
