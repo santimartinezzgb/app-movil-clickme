@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top|center"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        tools:ignore="MissingConstraints"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/button" />
+
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe tu nombre aquí"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:text="Click me"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/purple_500"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="353dp"
+        />
+
+    <Button
+        android:id="@+id/button_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:text="Back"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2BE02B"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="353dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
