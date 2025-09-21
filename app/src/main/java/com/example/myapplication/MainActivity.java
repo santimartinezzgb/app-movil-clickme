@@ -26,24 +26,31 @@ public class MainActivity extends AppCompatActivity {
 
         button.setOnClickListener(new View.OnClickListener() {
 
-
             @Override
             public void onClick(View v) {
 
                 String texto = input.getText().toString().trim();
 
-                if(texto.trim().equals("cabron")){
+                if (texto.matches(".*\\d.*")){
+                    Toast.makeText(MainActivity.this, "No se permiten numeros" , Toast.LENGTH_SHORT).show();
+                } else if (texto.trim().equals("cabron")){
                     Toast.makeText(MainActivity.this, "Palabra prohibida detectada" , Toast.LENGTH_SHORT).show();
 
-                }else if(texto.isEmpty()){
+                } else if (texto.isEmpty()){
                     Toast.makeText(MainActivity.this, "Por favor ingresa tu nombre", Toast.LENGTH_SHORT).show();
 
-                } else{
+                } else {
                     button_back.setVisibility(View.VISIBLE);
                     input.setVisibility(View.GONE);
                     button.setVisibility(View.GONE);
                     textView.setVisibility(View.VISIBLE);
-                    textView.setText("Hola" + " " + texto);
+                    textView.setText(
+                            "\nHola" + " " + texto.toUpperCase() +
+                            "\n" +
+                            "\nTu nombre empieza por la letra: " + texto.charAt(0) +
+                            "\ny acaba por la letra: " + texto.charAt(texto.length() - 1) +
+                            "\n" +
+                            "\n" + texto.toUpperCase() + " tiene " + texto.length() + " letras");
                 }
 
             }
