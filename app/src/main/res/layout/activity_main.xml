@@ -12,16 +12,6 @@
         android:layout_height="match_parent">
     </LinearLayout>
 
-    <!--<EditText
-        android:id="@+id/input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Escribe tu nombre aquí"
-        android:textSize="25dp"
-        android:textAlignment="center"
-        android:paddingTop="250dp"
-        tools:ignore="MissingConstraints" />-->
-
     <Button
         android:id="@+id/button"
         app:layout_constraintBottom_toBottomOf="parent"
