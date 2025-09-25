@@ -21,19 +21,16 @@ public class MainActivity extends AppCompatActivity {
         // EditText input = findViewById(R.id.input);
 
         button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
 
-                // String texto = input.getText().toString().trim();
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
 
-                //if (texto.isEmpty()){
-                //    Toast.makeText(MainActivity.this, "Por favor ingresa tu nombre", Toast.LENGTH_SHORT).show();
-                //} else {
-                    // Para cambiar de activity
-                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                    startActivity(intent);
-                //}
             }
         });
+
+
     }
 }
