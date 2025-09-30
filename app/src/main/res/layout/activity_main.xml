@@ -7,7 +7,7 @@
     android:background="#FFFFFF">
 
     <LinearLayout
-        android:background="@drawable/demofondo"
+        android:background="@drawable/wallpaper_app"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </LinearLayout>
